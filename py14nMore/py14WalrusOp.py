@@ -1,14 +1,16 @@
 
+# WITHOUT WALLRUS OPERATOR
+#------------------------------------------
+# 
+# heroes = list()
+# while True:
+#     getInput = input("Enter a Super-Hero: ")
+#     if getInput == "q":
+#         break
+#     heroes.append(getInput)
+# print(heroes)
 
-heroes = list()
-
-while True:
-    getInput = input("Enter a Super-Hero: ")
-    if getInput == "q":
-        break
-    heroes.append(getInput)
-
-print(heroes)
+# --------------------------------------------
 
 #When any output shows this error------------------->
 # -----------------------------------------------------
@@ -19,3 +21,10 @@ print(heroes)
 # SyntaxError: invalid syntax
 # -----------------------------------------------------
 # Then delete the powershell multiple command windows and fresh run the program,, things will go smooth
+
+# USING WALRUS OPERATOR ( := )
+
+myHeroes = list()
+while (getInput := input("Enter a Super-Hero: ")) != "q":
+    myHeroes.append(getInput)
+print(myHeroes)
